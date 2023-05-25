@@ -48,3 +48,12 @@ CREATE TABLE related {
   related_product_id INT NOT NULL,
 
 }
+
+CREATE TABLE cart {
+id serial INT PRIMARY KEY,
+  user_session INT NOT NULL,
+  product_id INT NOT NULL,
+  active INT NOT NULL,
+
+
+}
