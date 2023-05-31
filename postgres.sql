@@ -30,7 +30,7 @@ CREATE TABLE styles (
 );
 
 CREATE TABLE photos (
-   id serial PRIMARY KEY,
+  id serial PRIMARY KEY,
   styleId INTEGER ,
   url TEXT ,
   thumbnail_url TEXT
@@ -41,13 +41,13 @@ CREATE TABLE skus (
   styleId INTEGER ,
   size TEXT ,
   quantity INTEGER
+
 );
 
 CREATE TABLE related (
-   id serial PRIMARY KEY,
+  id serial PRIMARY KEY,
   current_product_id INTEGER REFERENCES product(id),
   related_product_id INTEGER
-
 );
 
 COPY product FROM '/Users/sahidblapped/Desktop/hackreactor/Product-Backend/data/product.csv' DELIMITER ',' CSV HEADER;
